@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
 import './TodoList.css'
 import { AiFillCheckCircle } from "react-icons/ai";
-import { Container, ListGroup, Row, 
-        Col, Button, Modal, 
-        Alert, Form } from 'react-bootstrap'
+import {
+    Container, ListGroup, Row,
+    Col, Button, Modal,
+    Alert, Form
+} from 'react-bootstrap'
 
 function TodoList(props) {
 
@@ -117,7 +119,7 @@ function TodoList(props) {
                         <Form.Label>Descrição da Tarefa</Form.Label>
                         <Form.Control type="text" placeholder="Digite o novo nome da tarefa"
                             value={task.description}
-                            onChange={event => setTask({...task, description: event.target.value})} />
+                            onChange={event => setTask({ ...task, description: event.target.value })} />
                     </Form.Group>
                 </Modal.Body>
                 <Modal.Footer>
@@ -127,7 +129,7 @@ function TodoList(props) {
                     <Button variant="success" onClick={() => {
                         props.editDescription(task)
                         handleCloseEdit()
-                        }
+                    }
                     }>
                         Editar
                     </Button>
